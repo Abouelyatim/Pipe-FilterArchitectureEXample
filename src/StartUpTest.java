@@ -36,12 +36,14 @@ public class StartUpTest extends Application {
         System.out.println("You called a method on the application");
     }
 
-    public  Button sommeBtn;
+    public   Button sommeBtn;
     Button produitBtn;
     Button factorielBtn;
 
     public TextField tf1;
     public TextField tf2;
+
+    public static  Label resultatLabel;
     @Override
     public void start(Stage stage) throws Exception {
 
@@ -61,7 +63,7 @@ public class StartUpTest extends Application {
 
         Label nombreLabel1=new Label("nombre 1");
         Label nombreLabel2=new Label("nombre 2");
-        Label resultatLabel=new Label("resultat");
+         resultatLabel=new Label("resultat");
 
         hbox1.getChildren().add(nombreLabel1);
         hbox1.getChildren().add(tf1);

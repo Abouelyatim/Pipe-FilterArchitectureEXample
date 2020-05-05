@@ -1,3 +1,5 @@
+import javafx.application.Platform;
+
 public  class FilterC extends Filter {
  
     Pipe _dataINPipe;
@@ -25,12 +27,18 @@ public  class FilterC extends Filter {
 	@Override
 	synchronized void execute() {
 		// TODO Auto-generated method stub
+		while (true){
 			String trace  = _dataINPipe.dataOUT();
 			double result =Double.parseDouble( _dataINPipe.dataOUT()) ;
 			System.out.println("result in filterC: "+result);
-		System.out.println("trace in filterC: "+trace);
+			System.out.println("trace in filterC: "+trace);
+			Platform.runLater(()->{
+				StartUpTest.resultatLabel.setText(String.valueOf(result));
+			});
 
-		_dataOUTPipe.dataIN(result+"--> Filter C");
+			_dataOUTPipe.dataIN(result+"--> Filter C");
+		}
+
 	}
 }
  

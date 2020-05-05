@@ -25,7 +25,10 @@ public  class FilterD extends Filter {
 	@Override
 	synchronized void execute() {
 		// TODO Auto-generated method stub
-		System.out.printf(_dataINPipe.dataOUT()+"--> Filter D");
+		while (true){
+			System.out.printf(_dataINPipe.dataOUT()+"--> Filter D");
+		}
+
 	}
 }
  

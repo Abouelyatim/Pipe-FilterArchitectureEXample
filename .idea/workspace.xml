@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a0f487ea-b762-434d-9877-887c1164483a" name="Default Changelist" comment="" />
+    <list default="true" id="a0f487ea-b762-434d-9877-887c1164483a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/pipeFilter/FilterB.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/pipeFilter/FilterB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FilterB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FilterB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FilterC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FilterC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/FilterD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FilterD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartUpTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StartUpTest.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +31,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../1/Pipe-FilterArchitectureEXample-master" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -71,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588609017837</updated>
       <workItem from="1588609022338" duration="7687000" />
-      <workItem from="1588629884246" duration="7895000" />
+      <workItem from="1588629884246" duration="11349000" />
     </task>
     <servers />
   </component>
