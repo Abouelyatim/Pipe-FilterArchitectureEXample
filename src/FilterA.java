@@ -36,77 +36,75 @@ public  class FilterA extends Filter {
 	public static PauseTransition pause;
 	@Override
 	synchronized void execute() {
-		// TODO Auto-generated method stub
-
-
 
 		StartUpStartUpTest.main(mainArg);
-
-
 
 		StartUpTest startUpTest = StartUpTest.waitForStartUpTest();
 		startUpTest.printSomething();
 
+		final double[] op1 = new double[1];
+		final double[] op2 = new double[1];
+		final String[] op3 = new String[1];
 
+		startUpTest.sommeBtn.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
 
-		//Platform.runLater(()->{
+				if(!startUpTest.tf1.getText().isEmpty() && !startUpTest.tf2.getText().isEmpty()){
+					op1[0] =0;
+					op2[0] =0;
+					op3[0] = "+";
+					op1[0] = Double.parseDouble(startUpTest.tf1.getText());
+					op2[0] = Double.parseDouble(startUpTest.tf2.getText());
 
-			final double[] op1 = new double[1];
-			final double[] op2 = new double[1];
+					_dataOUTPipe.dataIN(Double.toString(op1[0]));
+					_dataOUTPipe.dataIN(Double.toString(op2[0]));
+					_dataOUTPipe.dataIN(op3[0]);
+				}
 
-
-
-			//while (true) {
-				final String[] op3 = new String[1];
-
-				startUpTest.sommeBtn.setOnAction(new EventHandler<ActionEvent>() {
-					@Override
-					public void handle(ActionEvent e) {
-
-						op3[0] = "+";
-						op1[0] = Double.parseDouble(startUpTest.tf1.getText());
-						op2[0] = Double.parseDouble(startUpTest.tf2.getText());
-
-						_dataOUTPipe.dataIN(Double.toString(op1[0]));
-						_dataOUTPipe.dataIN(Double.toString(op2[0]));
-						_dataOUTPipe.dataIN(op3[0]);
-
-
-
-
-					}
-				});
-				startUpTest.produitBtn.setOnAction(new EventHandler<ActionEvent>() {
-					@Override
-					public void handle(ActionEvent e) {
-						op3[0] = "*";
-						op1[0] = Double.parseDouble(startUpTest.tf1.getText());
-						op2[0] = Double.parseDouble(startUpTest.tf2.getText());
-
-						_dataOUTPipe.dataIN(Double.toString(op1[0]));
-						_dataOUTPipe.dataIN(Double.toString(op2[0]));
-						_dataOUTPipe.dataIN(op3[0]);
-					}
+			}
 				});
 
-				startUpTest.factorielBtn.setOnAction(new EventHandler<ActionEvent>() {
-					@Override
-					public void handle(ActionEvent e) {
-						op3[0] = "!";
-						op1[0] = Double.parseDouble(startUpTest.tf1.getText());
-						op2[0] = Double.parseDouble(startUpTest.tf2.getText());
+		startUpTest.produitBtn.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+				if(!startUpTest.tf1.getText().isEmpty() && !startUpTest.tf2.getText().isEmpty()){
+					op1[0] =0;
+					op2[0] =0;
+					op3[0] = "*";
+					op1[0] = Double.parseDouble(startUpTest.tf1.getText());
+					op2[0] = Double.parseDouble(startUpTest.tf2.getText());
 
-						_dataOUTPipe.dataIN(Double.toString(op1[0]));
-						_dataOUTPipe.dataIN(Double.toString(op2[0]));
-						_dataOUTPipe.dataIN(op3[0]);
-					}
+					_dataOUTPipe.dataIN(Double.toString(op1[0]));
+					_dataOUTPipe.dataIN(Double.toString(op2[0]));
+					_dataOUTPipe.dataIN(op3[0]);
+				}
+
+			}
+				});
+
+		startUpTest.factorielBtn.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+
+				if(!startUpTest.tf1.getText().isEmpty() ){
+					op1[0] =0;
+					op2[0] =0;
+
+					op3[0] = "!";
+					op1[0] = Double.parseDouble(startUpTest.tf1.getText());
+
+
+					_dataOUTPipe.dataIN(Double.toString(op1[0]));
+					_dataOUTPipe.dataIN(Double.toString(op2[0]));
+					_dataOUTPipe.dataIN(op3[0]);
+				}
+
+			}
+
 				});
 
 
-
-			//}
-
-		//});
 
 
 

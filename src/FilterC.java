@@ -1,4 +1,6 @@
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 
 public  class FilterC extends Filter {
  
@@ -30,13 +32,20 @@ public  class FilterC extends Filter {
 		while (true){
 			String trace  = _dataINPipe.dataOUT();
 			double result =Double.parseDouble( _dataINPipe.dataOUT()) ;
-			System.out.println("result in filterC: "+result);
-			System.out.println("trace in filterC: "+trace);
+
 			Platform.runLater(()->{
 				StartUpTest.resultatLabel.setText(String.valueOf(result));
 			});
 
-			_dataOUTPipe.dataIN(result+"--> Filter C");
+			StartUpTest.traceBtn.setOnAction(new EventHandler<ActionEvent>() {
+				@Override
+				public void handle(ActionEvent e) {
+					StartUpTest.traceLabel.setText(trace);
+
+				}
+			});
+
+
 		}
 
 	}

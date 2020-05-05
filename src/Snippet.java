@@ -1,3 +1,7 @@
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+
 public class Snippet {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,10 +24,18 @@ public class Snippet {
 		Thread th3 = new Thread( c1 );
 		Thread th4 = new Thread( d1 );
 
+		Thread[] th={th1,th2,th3,th4};
+
 		th1.start();
 		th2.start();
 		th3.start();
 		th4.start();
+
+		StartUpTest startUpTest = StartUpTest.waitForStartUpTest();
+		startUpTest.endThread(th);
+
+
+
 
 	}
 }

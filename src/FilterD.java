@@ -26,7 +26,7 @@ public  class FilterD extends Filter {
 	synchronized void execute() {
 		// TODO Auto-generated method stub
 		while (true){
-			System.out.printf(_dataINPipe.dataOUT()+"--> Filter D");
+			//System.out.printf(_dataINPipe.dataOUT()+"--> Filter D");
 		}
 
 	}
